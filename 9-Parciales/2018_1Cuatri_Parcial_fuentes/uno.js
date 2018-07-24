@@ -2,33 +2,17 @@
 function mostrar()
 {
 /*
-	var base;
-	var altura;
-	var perimetro;
-	base = prompt("Ingrese la base");
-	altura = prompt("Ingrese la altura");
-	perimetro = 2 * parseInt(base) + 2 * parseInt(altura); 
-	alert('El perimetro es ' + perimetro);
+Realizar el algoritmo que pida el ancho y el largo 
+de un rectángulo por prompt y que muestre el perímetro por alert.
 */
-var uno;
-var dos;
-var tres;
-var suma;
-var avg;
-var resta;
+var ancho;
+var largo;
+var perimetro;
 
-uno = prompt("Ingrese un numero");
-dos = prompt("Ingrese un numero");
-tres = prompt("Ingrese un numero");
+ancho = prompt("Ingrese el ancho");
+largo = prompt("Ingrese el largo");
+perimetro = (largo * 2) + (ancho * 2);
 
-suma = parseInt(uno) + parseInt(dos) + parseInt(tres);
-avg = parseInt(uno) + parseInt(dos) + parseInt(tres) / 3;
-resta = parseInt(uno) - parseInt(dos) - parseInt(tres);
-
-alert('La suma es ' + suma + ' el promedio es ' + avg + ' y la resta es ' + resta);
+alert('El perimetro es ' + perimetro);
 }
 
-/* 
-se ingresan 3 numeros informar en un solo alert la suma, el promedio
-y la resta de los numeros tal cual como fueron ingresados
-*/
