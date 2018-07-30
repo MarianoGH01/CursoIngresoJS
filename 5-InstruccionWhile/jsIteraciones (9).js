@@ -16,24 +16,25 @@ function mostrar()
 		numero=prompt('Ingrese un numero.');
 		numero=parseInt(numero);
 		
-		if(contador == 0){
-			
-			maximo=numero;
-			mínimo=numero;
-		}
-		else{
-
-			if (numero > maximo) {
-				maximo = numero;
-			};
-
-			if (numero < mínimo) {
+		if (!isNaN(numero)) {
+			if(contador == 0){
+				
+				maximo=numero;
 				mínimo=numero;
+			}
+			else{
+
+				if (numero > maximo) {
+					maximo = numero;
+				};
+
+				if (numero < mínimo) {
+					mínimo=numero;
+				};
 			};
-		};
 
-		contador++;
-
+			contador++;
+		}
 		respuesta=prompt('Desea continuar? [si/no]');
 	};
 
