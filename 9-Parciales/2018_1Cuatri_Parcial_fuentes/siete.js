@@ -38,7 +38,9 @@ function mostrar()
 	EdadMasAlta = 0;
 	PromedioEdadMujeres = 0;
 	PromedioEdadHombres = 0;
-	EdadTotal = 0;
+	EdadTotal = 0
+	AcumEdadMujeres = 0;
+	AcumEdadHombres = 0;
 
 	while(contador <= 4){
 		
@@ -52,7 +54,7 @@ function mostrar()
 
 		};
 
-		if(sexo=='m'){
+		if(sexo=='f'){
 			ContadorDeMujeres++;
 		}
 		else{
@@ -81,6 +83,9 @@ function mostrar()
 			EdadMasAlta = edad;
 			NombreMasViejo = nombre;
 			SexoMasViejo = sexo;
+			if (sexo == 'f') {
+				NombreMujerMasVieja = nombre;
+			};
 		};
 
 		if (edad < EdadMasBaja) {
@@ -104,6 +109,9 @@ function mostrar()
 		PromedioEdadMujeres = (AcumEdadMujeres/ContadorDeMujeres);	
 	}
 	
+	if (AcumEdadHombres > 0) {
+		PromedioEdadHombres = (AcumEdadHombres/ContadorDeHombres);	
+	}
 
 	document.write('<br>ContadorDeMujeres ' + ContadorDeMujeres + '</br>');
 	document.write('<br>ContadorDeHombres ' + ContadorDeHombres + '</br>');
